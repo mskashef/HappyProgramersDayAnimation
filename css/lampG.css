@@ -1,0 +1,64 @@
+@import "animations.css";
+
+div.lampGroup{
+    display: inline-block;
+    transform: scale(0.6,0.6);
+    padding: 13px 126px 185px 25px;
+}
+div.lampGroup > div.lampContent {
+    display: inline-block;
+    position: relative;
+}
+div.lampGroup > div.lampContent div.lampBody{
+    display: inline-block;
+    width: 5px;
+    height: 160px;
+    position: absolute;
+    left: 23px;
+    border-radius: 5px 5px 0px 0px;
+    background: #182b3d;
+}
+div.lampGroup > div.lampContent div.lampFoot{
+    display: inline-block;
+    position: absolute;
+    width: 11px;
+    height: 40px;
+    background: #182b3d;
+    top: 150px;
+    left: 20px;
+    border-radius: 5px 5px 0px 0px;
+}
+div.lampGroup > div.lampContent div.lampHand{
+    display: inline-block;
+    position: absolute;
+    width: 52px;
+    height: 3px;
+    background: #182b3d;
+    top: 15px;
+    border-radius: 5px;
+}
+div.lampGroup > div.lampContent div.lamplight1 , div.lampGroup > div.lampContent div.lamplight2{
+    display: inline-block;
+    position: absolute;
+    width: 52px;
+    height: 15px;
+    width: 15px;
+    border-radius: 9px;
+    background: #fff;
+    top: 0px;
+    box-shadow: 0px 0px 20px 2px #fff;
+}
+div.lampGroup > div.lampContent div.lamplight2{
+    left: 36px;
+}
+div.lampGroupContainer {
+    display: block;
+    width: 3500px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    animation: moveLeftAndRightLamps;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

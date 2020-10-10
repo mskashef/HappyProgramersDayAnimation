@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Programmers' Day</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/h.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/lampG.css" />
+    <link rel="stylesheet" type="text/css" href="css/mountainG1.css" />
+    <link rel="stylesheet" type="text/css" href="css/mountainG2.css" />
+    <link rel="stylesheet" type="text/css" href="css/sky.css" />
+    <link rel="stylesheet" type="text/css" href="css/box.css" />
+    <link rel="stylesheet" type="text/css" href="css/logos.css" />
+    <script language="Javascript">
+      function startAnimation() {
+        document.getElementById("whole").style.display = "inherit";
+        setTimeout(openScene, 500);
+      }
+      function openScene() {
+        document.getElementById("hide1").style.left = "-55%";
+        document.getElementById("hide2").style.right = "-55%";
+      }
+      function openTheBox() {
+        document.getElementById("cubeDoor").style.transform =
+          "translateY(-100px)";
+      }
+      function openTheBox2() {
+        document.getElementById("cubeDoor").style.transform =
+          "translateY(-1500px)";
+      }
+      function bringOutTheHeart() {
+        document.getElementById("heartInCube").style.top = "-138px";
+        document.getElementById("heartInCube").style.transform =
+          "rotateX(10deg) translateZ(0px) rotateZ(-135deg)";
+      }
+      function bringOutTheHeart2() {
+        document.getElementById("heartInCube").style.top = "-250px";
+      }
+      function scaleHeart() {
+        document.getElementById("heartContainer").style.transform =
+          "scale(2,2)";
+      }
+      function removeCube() {
+        document.getElementById("cubeContainer").style.top = "1000px";
+        document.getElementById("heartInCube").style.top = "-700px";
+        scaleHeart();
+      }
+      function removeHeart() {
+        document.getElementById("heartContainer").style.transform =
+          "scale(0,0)";
+      }
+      function closeScene() {
+        document.getElementById("hide1").style.left = "0%";
+        document.getElementById("hide2").style.right = "0%";
+      }
+      //------ Starting Animations -----------------------------------------------------------------------
+      setTimeout(startAnimation, 4000);
+      setTimeout(openTheBox, 20000);
+      setTimeout(openTheBox2, 25000);
+      setTimeout(bringOutTheHeart, 30000);
+      setTimeout(bringOutTheHeart2, 34000);
+      setTimeout(removeCube, 39000);
+      setTimeout(removeHeart, 48000);
+      setTimeout(closeScene, 53000);
+    </script>
+  </head>
+  <body>
+    <div id="LogosContainer"></div>
+    <div class="hide" id="hide1"></div>
+    <div class="hide" id="hide2"></div>
+    <div class="whole" id="whole" style="display: none">
+      <div id="sky" class="sky" style="font-size: 100px">
+        <div class="moon">
+          <div class="grave1 grave"></div>
+          <div class="grave2 grave"></div>
+          <div class="grave3 grave"></div>
+          <div class="grave4 grave"></div>
+          <div class="grave5 grave"></div>
+          <div class="grave6 grave"></div>
+        </div>
+      </div>
+      <div class="mountainContainer1">
+        <div class="mountainGroup">
+          <div class="mountainContent">
+            <div class="mountain1 mountaindark"></div>
+            <div class="mountain2 mountaindark"></div>
+            <div class="mountain3 mountaindark"></div>
+            <div class="mountain4 mountaindark"></div>
+            <div class="mountain5 mountaindark"></div>
+            <div class="mountain6 mountaindark"></div>
+            <div class="mountain7 mountaindark"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mountainContainer2">
+        <div class="mountainGroup">
+          <div class="mountainContent">
+            <div class="mountainl1 mountainlight"></div>
+            <div class="mountainl2 mountainlight"></div>
+            <div class="mountainl3 mountainlight"></div>
+            <div class="mountainl4 mountainlight"></div>
+            <div class="mountainl5 mountainlight"></div>
+            <div class="mountainl6 mountainlight"></div>
+            <div class="mountainl7 mountainlight"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lampGroupContainer" id="lampGroupContainer"></div>
+      <div class="ground"></div>
+      <div class="cubeContainer" id="cubeContainer">
+        <div class="cubeDoorContainer" id="cubeDoor">
+          <div class="doorfront doorFace"></div>
+          <div class="doorback doorFace"></div>
+          <div class="doorleft doorFace"></div>
+          <div class="doorright doorFace"></div>
+          <div class="doortop doorFace"></div>
+          <div class="heartInCube"></div>
+        </div>
+        <div class="front face"></div>
+        <div class="back face"></div>
+        <div class="left face"></div>
+        <div class="right face"></div>
+        <div class="down face"></div>
+        <div class="heartInCube" id="heartInCube">
+          <div class="heartContainer" id="heartContainer">
+            <div class="heartText">Happy Programmers' Day :)</div>
+            <div class="cx"></div>
+            <div class="cy"></div>
+            <div class="sq"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script language="Javascript">
+      (function renderLogos() {
+        let logos = [];
+        for (let i = 0; i < 38; i++) {
+          logos.push(
+            `<img class="logo" src="img/Langs/Logo (${(i % 19) + 1}).png" />`
+          );
+        }
+        document.getElementById("LogosContainer").innerHTML = logos.join("");
+      })();
+      (function renderLamps() {
+        let lamps = [];
+        for (let i = 0; i < 45; i++) {
+          lamps.push(`
+              <div class="lampGroup">
+                <div class="lampContent">
+                  <div class="lamplight1"></div>
+                  <div class="lamplight2"></div>
+                  <div class="lampHand"></div>
+                  <div class="lampBody"></div>
+                  <div class="lampFoot"></div>
+                </div>
+              </div>`);
+        }
+        document.getElementById("lampGroupContainer").innerHTML = lamps.join(
+          ""
+        );
+      })();
+      function showLogos() {
+        document.getElementById("LogosContainer").style.display = "block";
+      }
+      setTimeout(showLogos, 10000);
+      setTimeout(startLogos, 10000);
+      function startLogos() {
+        var flowers = document.getElementsByClassName("logo");
+        for (var i = 0; i < flowers.length; i++) {
+          flowers[i].style.width = Math.floor(20 + Math.random() * 60) + "px";
+          flowers[i].style.animationDelay =
+            Math.floor(Math.random() * 15) +
+            "." +
+            Math.floor(Math.random() * 10) +
+            "s";
+          flowers[i].style.animationDuration =
+            Math.floor(7 + Math.random() * 10) + "s";
+          flowers[i].style.left =
+            10 * Math.floor(Math.random() * 10) +
+            Math.floor(Math.random() * 10) +
+            "." +
+            Math.floor(Math.random() * 10) +
+            "%";
+          var a = 1;
+          a += Math.random() * 4;
+          a = Math.floor(a);
+          flowers[i].style.animationName = "rotate" + a;
+        }
+      }
+    </script>
+  </body>
+</html>

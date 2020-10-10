@@ -1,0 +1,58 @@
+@import "animations.css";
+
+div.mountainContainer2{
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    top: -300px;
+    margin-bottom: -473px;
+    width: 3500px;
+    position: relative;
+    animation: moveLeftAndRightLightMountains;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+div.mountainContainer2 > div.mountainGroup{
+    display: inline-block;
+    position: relative;    
+}
+
+div.mountainGroup > div.mountainContent {
+    display: inline-block;
+    position: relative;
+    
+}
+div.mountainlight{
+    display: inline-block;
+    position: absolute;
+    top: 120px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+    transform: rotateZ(45deg);
+    background: #274461;
+    box-shadow: inset 5px 5px 20px 0px rgba(255,255,255,0.1);
+}
+div.mountainl1{
+    left: -100px;
+}
+div.mountainl2{
+    left: 400px;
+}
+div.mountainl3{
+    left: 900px;
+}
+div.mountainl4{
+    left: 1400px;
+}
+div.mountainl5{
+    left: 1900px;
+}
+div.mountainl6{
+    left: 2400px;
+}
+div.mountainl7{
+    left: 2900px;
+}

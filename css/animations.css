@@ -1,0 +1,23 @@
+@keyframes moonGlow {
+    0%{box-shadow: 0px 0px 100px 0px rgba(255,255,255,0.6);}
+    50%{ box-shadow: 0px 0px 100px 10px rgba(255,255,255,0.6);}
+}
+@keyframes moveLeftAndRightLamps {
+    0%{left:0px;}
+    50%{left:-1600px;}
+    100%{left:0px;}
+}
+@keyframes moveLeftAndRightLightMountains {
+    0%{left:0px;}
+    50%{left:-800px;}
+    100%{left:0px;}
+}
+@keyframes moveLeftAndRightDarkMountains {
+    0%{left:0px;}
+    50%{left:-400px;}
+    100%{left:0px;}
+}
+@keyframes fadeOut {
+    0%{background: rgba(0,0,0,1);}
+    100%{background: rgba(0,0,0,0);}
+}
