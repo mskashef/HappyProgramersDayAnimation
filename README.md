@@ -1,7 +1,7 @@
 # Happy Programmers Day Animation
 
 This is a Really beautiful 3D animation written with just HTML, CSS and JS.
-It's now so good to have a heavy amount of animations in your webpage, but it's a good practice for those who wan't to increase their front-end skills.
+It's not so good to have a heavy amount of animations in your webpage, but it's a good practice for those who wan't to increase their front-end skills.
 
 ## Screenshot
 
